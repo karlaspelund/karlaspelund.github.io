@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Dulguun Amgalan, PhD</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>  
+  
+  <!--- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="dist/css/normalize.css">
+  <link rel="stylesheet" href="dist/css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <link rel="stylesheet" href="css/github-prettify-theme.css">
+  <script src="js/site.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" href="https://images.emojiterra.com/google/android-12l/512px/1f9ec.png" type="image/png">
+
+</head>
+
+<body class="code-snippets-visible">
+
+  <!-- Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <section class="header">
+      <h1 class="title">Dulguun Amgalan, PhD</h1>
+    </section>
+
+      <div class="value-props row">
+        <div class="one-half column"> <img class="u-max-full-width" src="images/photo.png"> </div>
+        <div class="one-half column">
+          <p>
+            <h5>
+              <b>Postdoctoral Researcher</b><br />
+              Dept of Genetics,<br />
+              Stanford University<br />
+            </h5>
+
+          <table>
+            <tr>
+              <td><i class="fas fa-graduation-cap"></i></td>
+              <td><a href="https://scholar.google.com" title="Google Scholar" class="link">
+                Google scholar
+              </a></td>
+            </tr>
+            <tr>
+              <td><i class="fab fa-linkedin"></i></td>
+              <td><a href="https://www.linkedin.com/in/adulguun/" title="LinkedIn" class="link">
+                LinkedIn</a></td>
+            </tr>
+            <tr>
+              <td><i class="fab fa-twitter"></i></td>
+              <td><a href="https://twitter.com/Dulguun_A" title="Twitter" class="link">
+                Twitter</a></td>
+          </table>
+          <p>
+          <p>
+            <button id="email" class="tooltip" onclick="copyEmail()">
+            <span class="noupper copy-button" style="margin-right: 5%">adulguun@gmail.com</span><i class="fa-regular fa-copy" style="font-size: 14px"></i>
+            </button>
+          </p>
+        </div>
+      </button>
+      
+    </div>
+  
+    <div class="navbar-spacer"></div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href="#aboutme">About Me</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#journal">Research Papers</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#journal">Teaching</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33397759-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+
+<script>
+  function copyEmail() {
+    // Email to be copied
+    const email = "adulguun@gmail.com";
+    
+    // Create a temporary input element
+    const tempInput = document.createElement("input");
+    tempInput.value = email;
+    document.body.appendChild(tempInput);
+    
+    // Select the text in the input element
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999); // For mobile devices
+    
+    // Copy the text inside the input element
+    document.execCommand("copy");
+    
+    // Remove the temporary input element
+    document.body.removeChild(tempInput);
+
+  // Change button text to "Copied!"
+    const button = document.querySelector(".copy-button");
+      const originalText = button.innerHTML;
+      const originalWidth = button.offsetWidth; // Get the original width
+
+      button.style.width = originalWidth + 'px'; // Set the fixed width
+      button.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copied!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+
+      // Revert button text back to original after 2 seconds
+      setTimeout(() => {
+        button.innerHTML = originalText;
+        button.style.width = ''; // Reset the width to auto
+      }, 1000);
+  }
+</script>
+
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>
