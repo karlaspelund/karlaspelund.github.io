@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Karl M. Aspelund</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="dist/css/normalize.css">
+  <link rel="stylesheet" href="dist/css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/1024px/1f41f.png" type="image/png">
+
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .header, .value-props {
+      margin: 1rem 0;
+    }
+    .docs-section {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+    .docs-header {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    section.paper {
+      margin-bottom: 2rem;
+    }
+    .title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 0.2em;
+    }
+    .authors, .link {
+      font-size: 0.9rem;
+      margin-bottom: 0.4em;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 0.95em;
+      margin-top: 0.5em;
+    }
+    details > p {
+      margin: 0.5em 0 1em 1em;
+      text-align: justify;
+    }
+    .link a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #0074d9;
+    }
+    .link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <section class="header">
+      <h1 class="title">Karl M. Aspelund</h1>
+    </section>
+    <div class="value-props row">
+      <div class="one-half column">
+        <img class="u-max-full-width" src="images/photo.jpg" alt="Karl M. Aspelund">
+      </div>
+      <div class="one-half column">
+        <p>I am a PhD candidate in Economics at MIT. My fields are environmental economics and industrial organization. My work has been supported by the <a href="https://www.nsfgrfp.org">NSF Graduate Research Fellowship</a> and the <a href="https://seagrant.noaa.gov/communities/students/graduate-fellows/nmfs-sg-fellowship/">NOAA-Sea Grant Fellowship</a>.</p>
+        <table>
+          <tr><td><i class="fas fa-scroll"></i></td><td><a href="https://karlaspelund.github.io/papers/Aspelund_CV_5dec24.pdf"><b>CV</b></a></td></tr>
+          <tr><td><i class="fas fa-graduation-cap"></i></td><td><a href="https://economics.mit.edu/people/phd-students/karl-m-aspelund"><b>MIT Website</b></a></td></tr>
+          <tr><td><i class="fab fa-linkedin"></i></td><td><a href="https://www.linkedin.com/in/kmaspelund"><b>LinkedIn</b></a></td></tr>
+        </table>
+        <button id="email" class="tooltip" onclick="copyEmail()">
+          <span class="copy-button">kmasp@mit.edu</span><i class="fa-regular fa-copy" style="font-size: 14px"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="docs-section" id="research-papers">
+      <h6 class="docs-header">Research Papers</h6>
+      <section class="paper">
+        <p class="title">Redistribution in Environmental Permit Markets: Transfers and Efficiency Costs with Trade Restrictions</p>
+        <p class="authors"></p>
+        <p class="link"><a href="https://karlaspelund.github.io/papers/aspelund_jmp.pdf">PDF</a></p>
+        <details><summary>Abstract</summary>
+          <p>Regulators often impose trade restrictions in environmental permit markets to redistribute value to groups that do not directly benefit from permit trade, such as labor in regulated firms...</p>
+        </details>
+      </section>
+      <section class="paper">
+        <p class="title">Additionality and Asymmetric Information in Environmental Markets: Evidence from Conservation Auctions</p>
+        <p class="authors">with <a href="https://annarusso.github.io/">Anna Russo</a></p>
+        <p class="link">
+          <a href="https://karlaspelund.github.io/papers/aspelund_russo_crp.pdf">PDF</a>
+          <a href="https://voxdev.org/topic/energy-environment/designing-environmental-markets-incentivise-conservation-lessons-us">VoxDev</a>
+        </p>
+        <details><summary>Abstract</summary>
+          <p>Market mechanisms aim to deliver environmental services at low cost. However, this objective is undermined by participants whose conservation actions are not marginal to the incentive...</p>
+        </details>
+      </section>
+    </div>
+
+    <div class="docs-section" id="research-in-progress">
+      <h6 class="docs-header">Research in Progress</h6>
+      <section class="paper">
+        <p class="title">Spatially Managing the Commons</p>
+        <p class="authors">with <a href="https://sites.google.com/view/aaronberman/">Aaron Berman</a></p>
+        <details><summary>Abstract</summary>
+          <p>Spatial closures are a common policy tool to allow natural resources to regenerate, but reopening these areas can trigger a "race," where rapid harvesting lowers prices and reduces overall efficiency...</p>
+        </details>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    function copyEmail() {
+      const email = "kmasp@mit.edu";
+      const tempInput = document.createElement("input");
+      tempInput.value = email;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      tempInput.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      const button = document.querySelector(".copy-button");
+      const originalText = button.innerHTML;
+      const originalWidth = button.offsetWidth;
+      button.style.width = originalWidth + 'px';
+      button.innerHTML = "Copied!";
+      setTimeout(() => {
+        button.innerHTML = originalText;
+        button.style.width = '';
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
