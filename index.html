@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <!-- CSS -->
+  <!-- Base CSS -->
   <link rel="stylesheet" href="dist/css/normalize.css">
   <link rel="stylesheet" href="dist/css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
@@ -27,7 +27,7 @@
       margin: 0;
       padding: 0;
     }
-    
+
     h1.title {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 3.5rem;
@@ -35,60 +35,69 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       text-align: center;
-      margin: 2rem 0 1rem;
+      margin: 1.5rem 0 1rem;
     }
-    
-    h2.docs-header {
+
+    h2.section-header {
       font-size: 2rem;
       font-weight: 600;
-      margin: 2rem 0 0.5rem;
+      margin: 0 0 0.5rem;
       text-align: left;
-      border: none;
-      padding: 0;
     }
-    
+
     .container p {
       text-align: justify;
     }
-    
-    section.paper {
-      margin-bottom: 1.5rem;
+
+    .bio-section {
+      margin: 1rem 0;
     }
-    
+
+    .paper-section {
+      margin-top: 1rem;
+    }
+
+    section.paper {
+      margin-bottom: 1rem;
+    }
+
     .title {
       font-size: 1.8rem;
       font-weight: bold;
       margin-bottom: 0.2em;
+      max-width: 40rem;
+      line-height: 1.3;
+      word-break: break-word;
     }
-    
+
     .authors, .link {
       font-size: 1.6rem;
       margin-bottom: 0.3em;
     }
-    
+
     summary {
       cursor: pointer;
       font-weight: 500;
       font-size: 1.6rem;
       margin-top: 0.3em;
     }
-    
+
     details > p {
       margin: 0.5em 0 0.75em 1em;
       text-align: justify;
     }
-    
+
     .link a {
       margin-right: 10px;
       text-decoration: none;
       color: #0074d9;
       font-weight: 500;
     }
-    
+
     .link a:hover {
       text-decoration: underline;
     }
-    
+
     button.tooltip {
       margin-top: 0.5rem;
       background: none;
@@ -98,17 +107,16 @@
       cursor: pointer;
       border-radius: 4px;
     }
-
   </style>
 </head>
 
 <body>
   <div class="container">
-    <section>
+    <header>
       <h1 class="title">Karl M. Aspelund</h1>
-    </section>
+    </header>
 
-    <div class="row" style="margin: 1rem 0;">
+    <section class="bio-section row">
       <div class="one-half column">
         <img class="u-max-full-width" src="images/photo.jpg" alt="Karl M. Aspelund">
       </div>
@@ -126,10 +134,10 @@
           <span class="copy-button">kmasp@mit.edu</span> <i class="fa-regular fa-copy" style="font-size: 14px"></i>
         </button>
       </div>
-    </div>
+    </section>
 
-    <div class="docs-section" id="research-papers">
-      <h2 class="docs-header">Research Papers</h2>
+    <section class="paper-section" id="research-papers">
+      <h2 class="section-header">Research Papers</h2>
 
       <section class="paper">
         <p class="title">Redistribution in Environmental Permit Markets: Transfers and Efficiency Costs with Trade Restrictions</p>
@@ -155,16 +163,16 @@
           <p>Market mechanisms aim to reduce environmental degradation at low cost, but they are undermined when participants’ conservation actions are not marginal to the incentive — or “additional” ...</p>
         </details>
       </section>
-    </div>
+    </section>
 
-    <div class="docs-section" id="research-in-progress">
-      <h2 class="docs-header">Research in Progress</h2>
+    <section class="paper-section" id="research-in-progress">
+      <h2 class="section-header">Research in Progress</h2>
 
       <section class="paper">
         <p class="title">Spatially Managing the Commons</p>
         <p class="authors">with <a href="https://sites.google.com/view/aaronberman/">Aaron Berman</a></p>
       </section>
-    </div>
+    </section>
   </div>
 
   <script>
