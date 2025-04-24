@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="dist/css/normalize.css">
@@ -25,89 +25,93 @@
       line-height: 1.7;
       color: #333;
     }
-    
+
     h1.title {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 3.5rem;
       font-weight: 700;
       letter-spacing: 0.05em;
       text-transform: uppercase;
+      margin-bottom: 0.25rem;
     }
-    
-    .header, .value-props {
-      margin: 1rem 0;
-    }
-    
-    .docs-section {
-      margin-top: 0.5rem;
-      padding-top: 1rem;
-      border-top: 1px solid #eee;
-    }
-    
-    .docs-header {
-      font-family: 'Inter', sans-serif;
+
+    h2.docs-header {
       font-size: 2rem;
       font-weight: 600;
-      margin-bottom: 0.75rem;
+      margin: 2rem 0 0.75rem;
+      border-top: 1px solid #eee;
+      padding-top: 1rem;
     }
-    
+
+    .container p {
+      text-align: justify;
+    }
+
     section.paper {
       margin-bottom: 1rem;
     }
-    
+
     .title {
-      font-family: 'Inter', sans-serif;
       font-size: 1.8rem;
       font-weight: bold;
       margin-bottom: 0.2em;
     }
-    
+
     .authors, .link {
-      font-family: 'Inter', sans-serif;
       font-size: 1.6rem;
       margin-bottom: 0.3em;
     }
-    
+
     summary {
-      font-family: 'Inter', sans-serif;
       cursor: pointer;
       font-weight: 500;
       font-size: 1.6rem;
       margin-top: 0.3em;
     }
-    
+
     details > p {
-      font-family: 'Inter', sans-serif;
       margin: 0.5em 0 0.75em 1em;
       text-align: justify;
     }
-    
+
     .link a {
-      font-family: 'Inter', sans-serif;
       margin-right: 10px;
       text-decoration: none;
       color: #0074d9;
       font-weight: 500;
     }
-    
+
     .link a:hover {
       text-decoration: underline;
     }
 
+    button.tooltip {
+      margin-top: 0.5rem;
+      background: none;
+      border: 1px solid #ccc;
+      padding: 0.5em 1em;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <section class="header">
+    <section>
       <h1 class="title">Karl M. Aspelund</h1>
     </section>
-    <div class="value-props row">
+
+    <div class="row" style="margin: 1rem 0;">
       <div class="one-half column">
         <img class="u-max-full-width" src="images/photo.jpg" alt="Karl M. Aspelund">
       </div>
       <div class="one-half column">
-        <p style="text-align: justify;">I am a PhD candidate in Economics at MIT studying environmental economics. My work has been supported by the <a href="https://www.nsfgrfp.org">NSF Graduate Research Fellowship</a> and the <a href="https://seagrant.noaa.gov/communities/students/graduate-fellows/nmfs-sg-fellowship/">NOAA-Sea Grant Fellowship</a>.</p>
+        <p>I am a PhD candidate in Economics at MIT studying environmental economics. My work has been supported by the 
+          <a href="https://www.nsfgrfp.org">NSF Graduate Research Fellowship</a> and the 
+          <a href="https://seagrant.noaa.gov/communities/students/graduate-fellows/nmfs-sg-fellowship/">NOAA-Sea Grant Fellowship</a>.
+        </p>
         <table>
           <tr><td><i class="fas fa-scroll"></i></td><td><a href="https://karlaspelund.github.io/papers/Aspelund_CV_5dec24.pdf"><b>CV</b></a></td></tr>
           <tr><td><i class="fas fa-graduation-cap"></i></td><td><a href="https://economics.mit.edu/people/phd-students/karl-m-aspelund"><b>MIT Website</b></a></td></tr>
@@ -120,16 +124,20 @@
     </div>
 
     <div class="docs-section" id="research-papers">
-      <h6 class="docs-header">RESEARCH PAPERS</h6>
+      <h2 class="docs-header">Research Papers</h2>
+
       <section class="paper">
         <p class="title">Redistribution in Environmental Permit Markets: Transfers and Efficiency Costs with Trade Restrictions</p>
         <p class="authors"></p>
-        <p class="link"><a href="https://karlaspelund.github.io/papers/aspelund_jmp.pdf">PDF</a></p>
-        <details><summary>Abstract</summary>
-          <p>Regulators often impose trade restrictions in environmental permit markets, lowering gains from trade in order to redistribute to groups that do not directly benefit from permit trade, such as labor in regulated firms. I evaluate the efficiency and distributional impacts of two common trade restrictions in Iceland’s fisheries permit market: segmented trading by firm size and individual production requirements. Using detailed harvest and permit trading data linked to administrative records on worker employment and earnings, I conduct a difference-in-differences analysis showing that permit trade increases the harvest share of productive boats by 15 percentage points, shifts income from lower- to higher-income workers, and reduces aggregate labor demand by 12%. I further demonstrate that the trade restrictions, designed to counteract these labor impacts, are binding and lower productivity. To quantify the trade-offs from each restriction, I develop a model of fishery production and permit trading to simulate profits, labor demand, and worker earnings in permit market equilibria without the restrictions. The comparison reveals distinct benefits for each restriction: per dollar of foregone profit, segmentation increases labor demand 20 times more than the production requirement, while the production requirement redistributes 14% more income to low-income workers than segmentation. Implementing both restrictions creates more jobs and higher-paying ones, and even outperforms the production requirement alone.
-          </p>
+        <p class="link">
+          <a href="https://karlaspelund.github.io/papers/aspelund_jmp.pdf">PDF</a>
+        </p>
+        <details>
+          <summary>Abstract</summary>
+          <p>Regulators often impose trade restrictions in environmental permit markets, lowering gains from trade in order to redistribute to groups that do not directly benefit from permit trade, such as labor in regulated firms. ...</p>
         </details>
       </section>
+
       <section class="paper">
         <p class="title">Additionality and Asymmetric Information in Environmental Markets: Evidence from Conservation Auctions</p>
         <p class="authors">with <a href="https://annarusso.github.io/">Anna Russo</a></p>
@@ -137,14 +145,16 @@
           <a href="https://karlaspelund.github.io/papers/aspelund_russo_crp.pdf">PDF</a>
           <a href="https://voxdev.org/topic/energy-environment/designing-environmental-markets-incentivise-conservation-lessons-us">VoxDev</a>
         </p>
-        <details><summary>Abstract</summary>
-          <p>Market mechanisms aim to reduce environmental degradation at low cost, but they are undermined when participants’ conservation actions are not marginal to the incentive — or “additional” — as the lowest-cost participants may not deliver the highest social value. We investigate this challenge in the Conservation Reserve Program’s auction mechanism for ecosystem services by linking bids to satellite-derived land use. We find that three-quarters of marginal auction winners are not additional, and that heterogeneity in counterfactual land use introduces adverse selection. To quantify the welfare implications, we develop a model of bidding and additionality. We then design alternative auctions that improve efficiency by using scoring rules incorporating expected land use impacts.
-          </p>
+        <details>
+          <summary>Abstract</summary>
+          <p>Market mechanisms aim to reduce environmental degradation at low cost, but they are undermined when participants’ conservation actions are not marginal to the incentive — or “additional” ...</p>
         </details>
       </section>
     </div>
+
     <div class="docs-section" id="research-in-progress">
-      <h6 class="docs-header">RESEARCH IN PROGRESS</h6>
+      <h2 class="docs-header">Research in Progress</h2>
+
       <section class="paper">
         <p class="title">Spatially Managing the Commons</p>
         <p class="authors">with <a href="https://sites.google.com/view/aaronberman/">Aaron Berman</a></p>
@@ -155,22 +165,17 @@
   <script>
     function copyEmail() {
       const email = "kmasp@mit.edu";
-      const tempInput = document.createElement("input");
-      tempInput.value = email;
-      document.body.appendChild(tempInput);
-      tempInput.select();
-      tempInput.setSelectionRange(0, 99999);
-      document.execCommand("copy");
-      document.body.removeChild(tempInput);
-      const button = document.querySelector(".copy-button");
-      const originalText = button.innerHTML;
-      const originalWidth = button.offsetWidth;
-      button.style.width = originalWidth + 'px';
-      button.innerHTML = "Copied!";
-      setTimeout(() => {
-        button.innerHTML = originalText;
-        button.style.width = '';
-      }, 1000);
+      navigator.clipboard.writeText(email).then(() => {
+        const button = document.querySelector(".copy-button");
+        const originalText = button.innerHTML;
+        const originalWidth = button.offsetWidth;
+        button.style.width = originalWidth + 'px';
+        button.innerHTML = "Copied!";
+        setTimeout(() => {
+          button.innerHTML = originalText;
+          button.style.width = '';
+        }, 1000);
+      });
     }
   </script>
 </body>
