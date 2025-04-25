@@ -112,27 +112,42 @@
     .profile-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1.5rem; /* was 1rem — optional */
-      align-items: center;
-      flex-direction: row;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      text-align: center;
     }
-  
-  .profile-links a {
-    font-weight: 500;
-    color: #0074d9;
-    text-decoration: none;
-  }
-  
-  .profile-links a:hover {
-    text-decoration: underline;
-  }
-  
-  .profile-links button {
-    font-weight: 500;
-  }
-
     
+    .profile-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.2rem;
+    }
+    
+    .profile-item a {
+      font-weight: 500;
+      color: #0074d9;
+      text-decoration: none;
+    }
+    
+    .profile-item a:hover {
+      text-decoration: underline;
+    }
+    
+    .profile-item button {
+      font-size: 1rem;
+      font-weight: 500;
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.8rem;
+      background: none;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+
     @media screen and (min-width: 768px) {
       .break {
         display: block;
@@ -176,18 +191,29 @@
         </p>
       </div>
     </div>
-    <div class="row">
-      <div class="twelve columns">
-        <div class="profile-links">
+  <div class="row">
+    <div class="twelve columns">
+      <div class="profile-links">
+        <div class="profile-item">
+          <i class="fas fa-scroll"></i>
           <a href="https://karlaspelund.github.io/papers/Aspelund_CV_5dec24.pdf"><b>CV</b></a>
+        </div>
+        <div class="profile-item">
+          <i class="fas fa-graduation-cap"></i>
           <a href="https://economics.mit.edu/people/phd-students/karl-m-aspelund"><b>MIT Website</b></a>
+        </div>
+        <div class="profile-item">
+          <i class="fab fa-linkedin"></i>
           <a href="https://www.linkedin.com/in/kmaspelund"><b>LinkedIn</b></a>
+        </div>
+        <div class="profile-item">
           <button id="email" class="tooltip" onclick="copyEmail()">
             <span class="copy-button">kmasp@mit.edu</span> <i class="fa-regular fa-copy" style="font-size: 14px"></i>
           </button>
         </div>
       </div>
     </div>
+  </div>
     <!-- Research Papers -->
     <div class="row" id="research-papers">
       <div class="twelve columns">
